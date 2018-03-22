@@ -2,6 +2,7 @@
 `<lNoAliases>` is .F. by default so aliases are included   
 `<nAddrFamily>` is HB_SOCKET_AF_INET by default   
 `<aInfo>` is an array in which each entry is also array with the following fields:   
+------|----|-----    
 HB_SOCKET_IFINFO_FAMILY   | 1 |   address family   
 HB_SOCKET_IFINFO_NAME     | 2 |   interface name   
 HB_SOCKET_IFINFO_FLAGS    | 3 |   flags HB_SOCKET_IFF_*   
