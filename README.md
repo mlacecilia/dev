@@ -3,13 +3,13 @@
       `<pSocket>` is a socket created by one of HB\_INET*() functions      
       `<nCompressionLevel>` is compression factor between 1 (fastest) and 9 (best) (see HB\_ZLIB\_COMPRESSION\_*) 0 (none) disable compression on output data but decompression is still working.   
       `<nStrategy>` is used to tune compression algorithm, see HB\_ZLIB\_STRATEGY\_\*   
-      The compression must be enabled on both connection sides, i.e.
-      on the server side:
-         conn := hb\_inetAccept( sock )
-         hb_inetCompress( conn )
-      and on the client side:
-         sock := hb\_inetConnect( cServer, nPort )
-         hb\_inetCompress( sock )
+      The compression must be enabled on both connection sides, i.e.   
+      on the server side:   
+          conn := hb\_inetAccept( sock )   
+         hb_inetCompress( conn )      
+      and on the client side:   
+          sock := hb\_inetConnect( cServer, nPort )   
+         hb\_inetCompress( sock )       
       in the same moment but it's not necessary to enable it at the beginning of connection. It can be done later, i.e. when both sides agree to enable connection using some custom protocol.   
       The compression has effect only on stream connections, i.e. TCP and it's ignored in datagram connections like UDP.   
       This function can be executed more then once changing the compression parameters but it causes that all data in readahead decompression buffer is discarded.    
